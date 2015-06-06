@@ -1,5 +1,5 @@
 ## Getting full dataset
-data_full <- read.csv("./Data/household_power_consumption.txt", header=T, sep=';', na.strings="?", 
+data_full <- read.csv("C:/Users/LV/Documents/Mes documents/GAUTIER/EMPLOI/MOOC/exdata-data-household_power_consumption/household_power_consumption.txt", header=T, sep=';', na.strings="?", 
                       nrows=2075259, check.names=F, stringsAsFactors=F, comment.char="", quote='\"')
 data_full$Date <- as.Date(data_full$Date, format="%d/%m/%Y")
 
@@ -13,7 +13,7 @@ data$Datetime <- as.POSIXct(datetime)
 
 ## Plot 1
 hist(data$Global_active_power, main="Global Active Power", 
-     xlab="Global Active Power (kilowatts)", ylab="Frequency", col="Red")
+     xlab="Global Active Power (kilowatt)", ylab="Frequency", col="Red")
 
 ## Saving to file
 dev.copy(png, file="plot1.png", height=480, width=480)
